@@ -1,5 +1,32 @@
+// Define the base colors for dark theme
+$black: #000;
+$white: #fff;
+$gray-700: #8a8a8a;
+$gray-900: #282828;
+$dark-off-white: #d4d4d4;
+
+// Assign the colors to theme variables
+$color-background: $black;
+$color-foreground: $dark-off-white;
+$color-border: $gray-700;
+$color-page-background: $gray-900;
+
+body {
+    background-color: $color-background;
+    color: $color-foreground;
+}
+
 $base-font-size: 1rem !default;
+
 .main-content {
   font-size: 1.5 * $base-font-size;
   font-family: 'Roboto', sans-serif;
 }
+
+// Change the color of links
+$link-color: $dark-off-white;
+$link-color-hover: lighten($dark-off-white, 10%);
+
+
+// Change the color of code blocks
+$code-background-color: darken($gray-900, 10%);
