@@ -1,31 +1,10 @@
-// Define the base colors for dark theme
-$black: #000;
-$white: #fff;
-$gray-700: #8a8a8a;
-$gray-900: #282828;
-$dark-off-white: #d4d4d4;
-$blue-link: #1565c0; // A blue color appropriate for links
+@import "./color_schemes/dark";
 
-// Assign the colors to theme variables
-$color-background: $black;
-$color-foreground: $dark-off-white;
-$color-border: $gray-700;
-$color-page-background: $gray-900;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-    background-color: $color-background;
-    color: $color-foreground;
-    font-family: 'Roboto', sans-serif; // Set the font for the whole website
-}
+$font-family-base: 'Roboto', sans-serif;
 
 .main-content {
-    background-color: $color-page-background;
-    font-size: 1.5 * $base-font-size;
-}
-
-// Change the color of links
-$link-color: $blue-link;
-$link-color-hover: lighten($blue-link, 10%);
-
-// Change the color of code blocks
-$code-background-color: darken($gray-900, 10%);
+    font-size: 2.0rem;
+  }
+  
