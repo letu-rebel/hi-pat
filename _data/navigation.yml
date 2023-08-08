@@ -1,2 +1,12 @@
+# _data/navigation.yml
 - title: Summaries
   url: /summaries/
+  children:
+    - title: 2023
+      url: /summaries/2023/
+    - title: 2022
+      url: /summaries/2022/
+    - title: 2020
+      url: /summaries/2020/
+    - title: 2017
+      url: /summaries/2017/
