@@ -74,5 +74,5 @@ Under the umbrella of the MIT License, this project operates. Use it wisely, kin
   var randomImageName = imageNames[Math.floor(Math.random() * imageNames.length)];
   var randomImageUrl = baseUrl + randomImageName + "?raw=true";
 
-  document.write('<img src="' + randomImageUrl + '" alt="Random Image" width="200"/>');
+  document.write('<img src="' + randomImageUrl + '" alt="Random Image" width="350"/>');
 </script>
