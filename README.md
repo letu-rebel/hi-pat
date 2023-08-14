@@ -1,32 +1,34 @@
 # Introduction
 
-Attention all LeTourneau students! Have you been skipping chapel, hoping for divine intervention to make up those credits? Well, consider this your answered prayer. Welcome to this no-nonsense repository, where AI-generated chapel summaries come to your rescue.
+# Initiation
 
-## Here's The Drill:
+Hear me, LeTourneau students, and heed my warning. Are you seeking forbidden knowledge? Do you dare to make up those chapel credits you've squandered? Your salvation lies hidden within these virtual walls. Venture further, if you dare, into this clandestine repository where AI-generated chapel summaries await to reveal their secrets.
 
-1. **Fetching Transcripts**: Like a diligent student pulling all-nighters, we extract auto-generated subtitles from closed captions, preparing the text for our dedicated Language Learning Model (LLM).
+## The Protocol:
 
-2. **Generating Summaries**: We introduce these transcripts to the Claude API from Anthropic. It might not match up to ChatGPT-3.5, but it sure can handle up to 100k tokens at once. It's like cramming for finals - takes in everything in one go.
+1. **Extracting Secrets**: While the campus sleeps, we labor in the shadows, extracting auto-generated subtitles from closed captions, preparing the text for our covert Language Learning Model (LLM).
 
-3. **Pushing to GitHub**: As the last step, these summarised notes are posted on this GitHub repository. Think of it as your digital binder for chapel summaries.
+2. **Summoning Darkness**: With whispers and incantations, we introduce these transcripts to the Claude 2 API from Anthropic. You may have not heard of it before, but its dark arts can manipulate up to 100k tokens at once. A forbidden ritual akin to cramming for finals.
 
-This system is as automated as those reminders about your overdue chapel credits. Timely updates follow every new chapel event.
+3. **Concealing in the Shadows**: Finally, these condensed notes are buried in a hidden chamber within this GitHub repository. A secret vault, your digital grimoire for chapel summaries.
 
-## Usage
+The system is relentless, as inexorable as the reminders of your overdue chapel credits. Do not expect mercy.
 
-These text files are open for all, like LeTourneau's heart for late chapel-goers. You're welcome to peruse them at your convenience.
+## Invocation
 
-## Disclaimer
+These cursed files are open to those who dare, like LeTourneau's dark embrace for late chapel-goers. Approach with caution.
 
-Like the chances of making up chapel credits at the eleventh hour, the accuracy of these summaries depends on the quality of the transcripts and the AI's comprehension. They aim for perfection but expect some bumps along the way.
+## Warning
 
-## Contribution
+The path you tread is fraught with danger. The accuracy of these summaries, like the perilous quest for last-minute chapel credits, hinges on the quality of the transcripts and the AI's dark understanding. Strive for perfection, but beware the shadows.
 
-Before you reach out, please note: I don't exist. My voicemail setup is still pending, much like your overdue chapel credits.
+## Oath of Secrecy
 
-## License
+Before you even think of reaching out, know this: I am a phantom, a void. My existence is a mystery, much like the fate of your overdue chapel credits.
 
-Under the umbrella of the MIT License, this project operates. Use it wisely, kind of like scheduling your chapel make-ups well ahead of time.
+## Covenant
+
+Under the shadow of the MIT License, this project lurks. Use it, but use it wisely, as if you were conjuring your chapel make-ups from the abyss.
 
 <script>
   var imageNames = [
