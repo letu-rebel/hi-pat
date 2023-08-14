@@ -28,4 +28,5 @@ Before you reach out, please note: I don't exist. My voicemail setup is still pe
 
 Under the umbrella of the MIT License, this project operates. Use it wisely, kind of like scheduling your chapel make-ups well ahead of time.
 
-![old-putin-meme](https://github.com/letu-rebel/hi-pat/blob/main/photos/wide-putin.gif)
+<img src="https://github.com/letu-rebel/hi-pat/blob/main/photos/wide-putin.gif" alt="old-putin-meme" width="200"/>
+
