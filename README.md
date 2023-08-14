@@ -1,4 +1,4 @@
-# Chapel Make-Up AI Summaries
+# Introduction
 
 Attention all LeTourneau students! Have you been skipping chapel, hoping for divine intervention to make up those credits? Well, consider this your answered prayer. Welcome to this no-nonsense repository, where AI-generated chapel summaries come to your rescue.
 
