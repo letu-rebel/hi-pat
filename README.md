@@ -28,8 +28,11 @@ Before you reach out, please note: I don't exist. My voicemail setup is still pe
 
 Under the umbrella of the MIT License, this project operates. Use it wisely, kind of like scheduling your chapel make-ups well ahead of time.
 
-{% assign image_names = "40izk9od7n771.gif,1984.gif,among-us-amogus.gif,ea.gif,elon-musk-smoke.gif,ezgif.com-gif-maker_4.giffuturama-checkmate.gif,huh.gif,image0.gif,IMG_1368.gif,IMG_4866.jpg,lithiumare-kiracord.gif,wide-putin.gif,yes-sir-yes-boss.gif" | split: "," %}
-{% assign random_image_name = image_names | sample %}
-{% assign random_image_url = "https://github.com/letu-rebel/hi-pat/blob/main/photos/" | append: random_image_name | append: "?raw=true" %}
+<script>
+  var imageNames = "40izk9od7n771.gif,1984.gif,among-us-amogus.gif,ea.gif,elon-musk-smoke.gif,ezgif.com-gif-maker_4.giffuturama-checkmate.gif,huh.gif,image0.gif,IMG_1368.gif,IMG_4866.jpg,lithiumare-kiracord.gif,wide-putin.gif,yes-sir-yes-boss.gif".split(",");
+  var baseUrl = "https://github.com/letu-rebel/hi-pat/blob/main/photos/";
+  var randomImageName = imageNames[Math.floor(Math.random() * imageNames.length)];
+  var randomImageUrl = baseUrl + randomImageName + "?raw=true";
 
-<img src="{{ random_image_url }}" alt="Random Image" width="200"/>
+  document.write('<img src="' + randomImageUrl + '" alt="Random Image" width="200"/>');
+</script>
