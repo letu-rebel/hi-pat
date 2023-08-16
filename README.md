@@ -11,7 +11,7 @@ Ever find yourself waking up late and missing chapel? Us too! That's why we've c
 ## :books: How to Use
 
 1. **Click**: Choose a summary that catches your fancy.
-2. **Read**: Engage with the wisdom of the chapel, without the hard pew.
+2. **Read**: Engage with the wisdom of the chapel, without the creaky chairs.
 3. **Pretend**: You were there, absorbing every word. We won't tell.
 
 ## :warning: Disclaimer
