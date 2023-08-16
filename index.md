@@ -61,6 +61,13 @@ These are AI-generated, so don't expect Shakespeare. And if Pat Mays is reading 
     "wawa-cat.gif",
     "where-is-the-library.gif",
     "wide-putin.gif",
+    "see-it-like-final.gif",
+    "mind-blow-galaxy.gif",
+    "aerodynamics-cow.gif",
+    "gotanygrapes.gif",
+    "the-incredibles-entrance.gif",
+    "freedom-freedoms-loudly.gif",
+    "barbenheimer.png",
     "yes-sir-yes-boss.gif"
     ];
   var baseUrl = "https://github.com/letu-rebel/hi-pat/blob/main/photos/";
