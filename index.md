@@ -11,7 +11,7 @@ Ever find yourself waking up late and missing chapel? Us too! That's why we've c
 
 - **Never Miss a Chapel Again**: Our summaries are here for your spiritual advancement... or procrastination. Your choice!
 - **Easy Searching**: Find summaries by speaker, date, or topic. It's like a treasure hunt, but with fewer pirates.
-- **AI-Driven Summaries**: Powered by fancy fun AI that's almost as wise as your professors. We said *almost*.
+- **AI-Driven Summaries**: Powered by AI that's almost as wise as your professors. We said *almost*.
 
 ## :books: How to Use
 
