@@ -28,6 +28,6 @@ Big thanks to procrastination for inspiring this project and to coffee for fueli
 
 ## :mailbox_with_mail: Contact
 
-Got questions? Suggestions? Fan mail? Reach out at [secretidentity@letu.edu](05.mutiny-taboos@icloud.com).
+Got questions? Suggestions? Fan mail? Reach out at [secretidentity@letu.edu](mailto:05.mutiny-taboos@icloud.com).
 
 Remember, LeTourneau Chapel Summaries is almost as good as being there. But not quite. Enjoy!
