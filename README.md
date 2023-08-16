@@ -1,16 +1,26 @@
-# Introduction
+---
+layout: default
+title: Introduction
+---
+# LeTourneau Chapel Summaries
 
-Hear me, LeTourneau students, and heed my warning. Are you seeking forbidden knowledge? Do you dare to make up those chapel credits you've squandered? Your salvation lies hidden within these virtual walls. Venture further, if you dare, into this clandestine repository where AI-generated chapel summaries await to reveal their secrets.
+Oh, missed a chapel? How *shocking*! Welcome to the world of LeTourneau Chapel Summaries, where technology meets procrastination. Here, you'll find AI-written summaries that are almost as good as being there. But not quite.
 
-These cursed files are open to those who dare, like LeTourneau's dark embrace for late chapel-goers. Approach with caution.
+## What's Inside?
 
-## Warning
+- **Summaries of Every Chapel**: Because who has time to attend them all?
+- **Find What You Need**: Search by speaker, date, or topic. It's like Google, but less useful.
+- **AI Magic**: Our AI's almost as wise as your professors. Almost.
 
-The path you tread is fraught with danger. The accuracy of these summaries, like the perilous quest for last-minute chapel credits, hinges on the quality of the transcripts and the AI's dark understanding. Strive for perfection, but beware the shadows.
+## How to Use
 
-## Oath of Secrecy
+Click, read, pretend you were there. Easy, right?
 
-Before you even think of reaching out, know this: I am a phantom, a void. My existence is a mystery, much like the fate of your overdue chapel credits.
+## Heads Up
+
+These are AI-generated, so don't expect Shakespeare. And if Pat Mays is reading this—hi! Big fan!
+
+
 
 <script>
   var imageNames = [
