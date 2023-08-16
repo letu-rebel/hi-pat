@@ -132,6 +132,22 @@
             World.add(engine.world, balls[i]);
         }
 
+        if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
+            // iOS 13+
+            document.body.addEventListener('click', function() {
+                DeviceOrientationEvent.requestPermission()
+                    .then(permissionState => {
+                        if (permissionState === 'granted') {
+                            window.addEventListener('deviceorientation', handleDeviceOrientation);
+                        }
+                    })
+                    .catch(console.error);
+            });
+        } else {
+            // Non-iOS 13+
+            window.addEventListener('deviceorientation', handleDeviceOrientation);
+        }
+
         // Device orientation event listener
         if (window.DeviceOrientationEvent) {
             window.addEventListener('deviceorientation', function(event) {
