@@ -70,7 +70,17 @@ These are AI-generated, so don't expect Shakespeare. And if Pat Mays is reading 
     "https://cdn.discordapp.com/attachments/1141434098188046346/1141434367546236938/montymole-monty.gif",
     "https://cdn.discordapp.com/attachments/1141434098188046346/1141434367911153674/see-it-like-final.gif",
     "https://cdn.discordapp.com/attachments/1141434098188046346/1141434380196262010/wide-putin.gif",
-    "https://cdn.discordapp.com/attachments/1141434098188046346/1141434380909297775/yes-sir-yes-boss.gif"
+    "https://cdn.discordapp.com/attachments/1141434098188046346/1141434380909297775/yes-sir-yes-boss.gif",
+    "https://media.discordapp.net/attachments/740982368474628200/1128244073996755034/1637169419563685298.gif",
+    "https://media.tenor.com/y1QFa-1vyKYAAAAC/plink-wide-cat.gif",
+    "https://media.tenor.com/VGWokGdwt-EAAAAC/the-voices-voices-in-my-head.gif",
+    "https://cdn.discordapp.com/emojis/914050559869333505.webp?size=96&quality=lossless",
+    "https://cdn.discordapp.com/attachments/817498273450819635/1139660758796484768/IMG_1723.webp",
+    "https://cdn.discordapp.com/attachments/817498273450819635/1139629820574187611/c7ca0c0ba7fe27ccff938396f8961a311b3cfdd29d2abcec617ab99efcb0d820_1.jpg",
+    "https://media.tenor.com/f8YmpuCCXJcAAAAC/roasted-oh.gif",
+    "https://media.discordapp.net/attachments/997036669976989777/1136917801563598868/IMG_2109.jpg",
+    "https://media.tenor.com/G01HjYj1r1oAAAAC/will-smith-men-in-black.gif",
+    "https://media.tenor.com/u9gFqnF5U3YAAAAC/crying-tears.gif"
   ];
 
   var randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
