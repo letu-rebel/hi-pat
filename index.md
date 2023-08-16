@@ -3,23 +3,25 @@ layout: default
 title: Introduction
 nav_order: 1
 ---
-# LeTourneau Chapel Summaries
+# LeTourneau Chapel Summaries :church:
 
-Oh, missed a chapel? How *shocking*! Welcome to the world of LeTourneau Chapel Summaries, where technology meets procrastination. Here, you'll find AI-written summaries that are almost as good as being there. But not quite.
+Ever find yourself waking up late and missing chapel? Us too! That's why we've created LeTourneau Chapel Summaries, where being late is fashionable, and summaries are a click away.
 
-## What's Inside?
+## :sparkles: Features
 
-- **Summaries of Every Chapel**: Because who has time to attend them all?
-- **Find What You Need**: Search by speaker, date, or topic. It's like Google, but less useful.
-- **AI Magic**: Our AI's almost as wise as your professors. Almost.
+- **Never Miss a Chapel Again**: Our summaries are here for your spiritual advancement... or procrastination. Your choice!
+- **Easy Searching**: Find summaries by speaker, date, or topic. It's like a treasure hunt, but with fewer pirates.
+- **AI-Driven Summaries**: Powered by fancy fun AI that's almost as wise as your professors. We said *almost*.
 
-## How to Use
+## :books: How to Use
 
-Click, read, pretend you were there. Easy, right?
+1. **Click**: Choose a summary that catches your fancy.
+2. **Read**: Engage with the wisdom of the chapel, without the creaky chairs.
+3. **Pretend**: You were there, absorbing every word. We won't tell.
 
-## Heads Up
+## :warning: Disclaimer
 
-These are AI-generated, so don't expect Shakespeare. And if Pat Mays is reading this—hi! Big fan!
+These summaries are written by AI, so don't expect poetry. If you're looking for Shakespeare, you might want to head to the English department. And hey, Pat Mays, if you're here—keep being awesome!
 
 <script>
   var imageUrls = [
