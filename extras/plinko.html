@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plinko Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(170deg, #1e1e1e 0%, #090433 50%, #1e1e1e 100%);
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const Engine = Matter.Engine,
+            Render = Matter.Render,
+            World = Matter.World,
+            Bodies = Matter.Bodies;
+
+        const screen_width = window.innerWidth;
+        const screen_height = window.innerHeight;
+        const peg_spacing = 60;
+        const peg_radius = 10;
+        const ball_density = 0.0002;
+        const ball_count = Math.floor(screen_width * screen_height * ball_density);
+
+        // Create engine and set gravity
+        const engine = Engine.create();
+        engine.world.gravity.y = .4; // Adjust this value for vertical gravity
+        engine.world.gravity.x = 0; // Adjust this value for horizontal gravity
+
+        const render = Render.create({
+            element: document.body,
+            engine: engine,
+            options: {
+                width: screen_width,
+                height: screen_height,
+                wireframes: false,
+                background: 'transparent'
+            }
+        });
+
+        Engine.run(engine);
+        Render.run(render);
+
+        function createPegs() {
+            let rows = (screen_height - 50) / peg_spacing;
+            let cols = screen_width / peg_spacing;
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    let offset = (peg_radius + peg_spacing / 2) * (row % 2);
+                    let x = col * peg_spacing + peg_radius + offset;
+                    let y = row * peg_spacing + peg_radius + 50;
+                    let peg = Bodies.circle(x, y, peg_radius, {
+                        isStatic: true,
+                        render: { fillStyle: '#000' }
+                    });
+                    World.add(engine.world, peg);
+                }
+            }
+        }
+
+        // Spawn a ball with custom restitution and friction
+        function spawnBall() {
+            let radius = 16;
+            let x = Math.random() * (screen_width - radius * 2) + radius;
+            let imageURL = "https://cdn.discordapp.com/attachments/1099561426059800626/1141214191299072132/Image.png";
+
+            return Bodies.circle(x, -radius, radius, {
+                restitution: 0.9,
+                friction: .005,
+                render: {
+                    sprite: {
+                        texture: imageURL, // Image URL
+                        xScale: .5,
+                        yScale: .5  // Keep the original aspect ratio
+                    }
+                }
+            });
+        }
+
+
+        createPegs();
+
+        let balls = [];
+        for (let i = 0; i < ball_count; i++) {
+            balls[i] = spawnBall();
+            World.add(engine.world, balls[i]);
+        }
+
+        Matter.Events.on(engine, 'afterUpdate', function() {
+            balls.forEach((ball, index) => {
+                if (ball.position.y > screen_height + ball.circleRadius) {
+                    World.remove(engine.world, ball);
+                    balls[index] = spawnBall();
+                    World.add(engine.world, balls[index]);
+                }
+
+                // Check if the ball goes off the left side
+                if (ball.position.x < -ball.circleRadius) {
+                    Matter.Body.setPosition(ball, { x: screen_width + ball.circleRadius, y: ball.position.y });
+                }
+
+                // Check if the ball goes off the right side
+                if (ball.position.x > screen_width + ball.circleRadius) {
+                    Matter.Body.setPosition(ball, { x: -ball.circleRadius, y: ball.position.y });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
