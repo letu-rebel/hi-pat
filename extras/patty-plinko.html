@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="https://github.com/letu-rebel/hi-pat/blob/main/extras/patty-plinko.ico?raw=true" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plinko Game</title>
+    <title>Patty Plinko</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
     <style>
-        body {
+        body, html {
             margin: 0;
-            background: linear-gradient(170deg, #1e1e1e 0%, #26262c 50%, #1e1e1e 100%);
-            background-size: 100% 100%;
+            padding: 0;
             overflow: hidden;
+        }
+        
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 105%;
+            height: 105%;
+            background: url('https://marvel-b1-cdn.bc0a.com/f00000000047992/www.letu.edu/alumni/images/academic-social/academic-social-alum-3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(7px) brightness(0.65);
+            z-index: -1;
         }
 
         canvas {
@@ -18,7 +30,9 @@
         }
     </style>
 </head>
+    
 <body>
+    <div id="background"></div>
     <script>
         const Engine = Matter.Engine,
             Render = Matter.Render,
@@ -61,12 +75,14 @@
                     let y = row * peg_spacing + peg_radius + 50;
                     let peg = Bodies.circle(x, y, peg_radius, {
                         isStatic: true,
-                        render: { fillStyle: '#000' }
+                        render: { fillStyle: '#333' } // Dark grey color
                     });
                     World.add(engine.world, peg);
                 }
             }
         }
+
+
 
         // Spawn a ball with custom restitution and friction
         function spawnBall() {
