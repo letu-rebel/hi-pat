@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Introduction
+nav_order: 1
 ---
 # LeTourneau Chapel Summaries
 
@@ -19,8 +20,6 @@ Click, read, pretend you were there. Easy, right?
 ## Heads Up
 
 These are AI-generated, so don't expect Shakespeare. And if Pat Mays is reading this—hi! Big fan!
-
-
 
 <script>
   var imageNames = [
