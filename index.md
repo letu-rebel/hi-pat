@@ -52,7 +52,6 @@ These are AI-generated, so don't expect Shakespeare. And if Pat Mays is reading 
     "kenneth-copeland.gif",
     "laughing-ben-shapiro.gif",
     "lithiumare-kiracord.gif",
-    "logo512.png",
     "mario-dance.gif",
     "monkeys-2001aspaceodyssey.gif",
     "montymole-monty.gif",

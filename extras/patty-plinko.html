@@ -17,8 +17,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 105%;
-            height: 105%;
+            width: 100%;
+            height: 100%;
             background: url('https://marvel-b1-cdn.bc0a.com/f00000000047992/www.letu.edu/alumni/images/academic-social/academic-social-alum-3.jpg') no-repeat center center fixed;
             background-size: cover;
             filter: blur(7px) brightness(0.65);
@@ -84,20 +84,40 @@
 
 
 
+        let spawnSide = 'top'; // Variable to determine the side to spawn the balls from
+
         // Spawn a ball with custom restitution and friction
         function spawnBall() {
             let radius = 16;
-            let x = Math.random() * (screen_width - radius * 2) + radius;
+            let x, y;
+            switch (spawnSide) {
+                case 'top':
+                    x = Math.random() * (screen_width - radius * 2) + radius;
+                    y = -radius;
+                    break;
+                case 'bottom':
+                    x = Math.random() * (screen_width - radius * 2) + radius;
+                    y = screen_height + radius;
+                    break;
+                case 'left':
+                    x = -radius;
+                    y = Math.random() * (screen_height - radius * 2) + radius;
+                    break;
+                case 'right':
+                    x = screen_width + radius;
+                    y = Math.random() * (screen_height - radius * 2) + radius;
+                    break;
+            }
             let imageURL = "https://github.com/letu-rebel/hi-pat/blob/main/maysmoments/lil_mays.png?raw=true";
 
-            return Bodies.circle(x, -radius, radius, {
+            return Bodies.circle(x, y, radius, {
                 restitution: 0.9,
                 friction: .005,
                 render: {
                     sprite: {
-                        texture: imageURL, // Image URL
+                        texture: imageURL,
                         xScale: .5,
-                        yScale: .5  // Keep the original aspect ratio
+                        yScale: .5
                     }
                 }
             });
@@ -110,6 +130,32 @@
         for (let i = 0; i < ball_count; i++) {
             balls[i] = spawnBall();
             World.add(engine.world, balls[i]);
+        }
+
+        // Device orientation event listener
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener('deviceorientation', function(event) {
+                let beta = event.beta;  // front-to-back tilt (rotation around x-axis)
+                let gamma = event.gamma; // left-to-right tilt (rotation around y-axis)
+
+                // Check if the orientation values are valid
+                if (beta !== null && gamma !== null) {
+                    // Determine the side of the screen closest to vertical
+                    if (Math.abs(beta) > Math.abs(gamma)) {
+                        spawnSide = beta > 0 ? 'bottom' : 'top';
+                    } else {
+                        spawnSide = gamma > 0 ? 'right' : 'left';
+                    }
+
+                    // Convert the orientation into gravity components
+                    let gravityX = Math.sin(gamma * (Math.PI / 180));
+                    let gravityY = Math.sin(beta * (Math.PI / 180));
+                    
+                    // Set the gravity in your physics engine
+                    engine.world.gravity.x = gravityX;
+                    engine.world.gravity.y = gravityY;
+                }
+            });
         }
 
         Matter.Events.on(engine, 'afterUpdate', function() {
@@ -132,6 +178,10 @@
             });
         });
 
+        // Event listener for window resize
+        window.addEventListener('resize', function() {
+            location.reload(); // Reloads the page
+        });
     </script>
 </body>
 </html>
