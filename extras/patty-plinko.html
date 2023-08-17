@@ -12,7 +12,6 @@
             padding: 0;
             overflow: hidden;
         }
-        
         #background {
             position: fixed;
             top: 0;
@@ -24,32 +23,43 @@
             filter: blur(7px) brightness(0.65);
             z-index: -1;
         }
-
+        #score {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255,255,255,0.5);
+            padding: 20px;
+            border-radius: 20px;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+            backdrop-filter: blur(10px);
+        }
         canvas {
             display: block;
         }
     </style>
 </head>
-    
 <body>
     <div id="background"></div>
+    <div id="score">Score: 0</div>
     <script>
         const Engine = Matter.Engine,
             Render = Matter.Render,
             World = Matter.World,
-            Bodies = Matter.Bodies;
+            Bodies = Matter.Bodies,
+            Body = Matter.Body;
 
         const screen_width = window.innerWidth;
         const screen_height = window.innerHeight;
         const peg_spacing = 60;
         const peg_radius = 10;
-        const ball_density = 0.0002;
-        const ball_count = Math.floor(screen_width * screen_height * ball_density);
+        const ball_density = 0.0001;
 
-        // Create engine and set gravity
         const engine = Engine.create();
-        engine.world.gravity.y = .4; // Adjust this value for vertical gravity
-        engine.world.gravity.x = 0; // Adjust this value for horizontal gravity
+        engine.world.gravity.y = .4;
+        engine.world.gravity.x = 0;
 
         const render = Render.create({
             element: document.body,
@@ -65,6 +75,8 @@
         Engine.run(engine);
         Render.run(render);
 
+        let score = 0;
+
         function createPegs() {
             let rows = (screen_height - 50) / peg_spacing;
             let cols = screen_width / peg_spacing;
@@ -75,19 +87,17 @@
                     let y = row * peg_spacing + peg_radius + 50;
                     let peg = Bodies.circle(x, y, peg_radius, {
                         isStatic: true,
-                        render: { fillStyle: '#333' } // Dark grey color
+                        render: { fillStyle: '#333' }
                     });
                     World.add(engine.world, peg);
                 }
             }
         }
 
-        // Spawn a ball with custom restitution and friction
         function spawnBall() {
             let radius = 16;
-            let x, y;
-            x = Math.random() * (screen_width - radius * 2) + radius;
-            y = -radius;
+            let x = Math.random() * (screen_width - radius * 2) + radius;
+            let y = -radius;
             let imageURL = "https://github.com/letu-rebel/hi-pat/blob/main/maysmoments/lil_mays.png?raw=true";
 
             return Bodies.circle(x, y, radius, {
@@ -103,71 +113,54 @@
             });
         }
 
+        const platform = Bodies.rectangle(screen_width / 2, screen_height - 20, 150, 10, {
+            isStatic: false,
+            render: { fillStyle: '#555' }
+        });
+        World.add(engine.world, platform);
 
         createPegs();
 
         let balls = [];
-        for (let i = 0; i < ball_count; i++) {
+        for (let i = 0; i < Math.floor(screen_width * screen_height * ball_density); i++) {
             balls[i] = spawnBall();
             World.add(engine.world, balls[i]);
         }
 
-        if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
-            // iOS 13+
-            document.body.addEventListener('click', function() {
-                DeviceOrientationEvent.requestPermission()
-                    .then(permissionState => {
-                        if (permissionState === 'granted') {
-                            window.addEventListener('deviceorientation', handleDeviceOrientation);
-                        }
-                    })
-                    .catch(console.error);
-            });
-        } else {
-            // Non-iOS 13+
-            window.addEventListener('deviceorientation', handleDeviceOrientation);
-        }
-
-        // Device orientation event listener
-        function handleDeviceOrientation(event) {
-            let beta = event.beta;  // front-to-back tilt (rotation around x-axis)
-            let gamma = event.gamma; // left-to-right tilt (rotation around y-axis)
-
-            // Check if the orientation values are valid
-            if (beta !== null && gamma !== null) {
-                // Convert the orientation into gravity components
-                let gravityX = Math.sin(gamma * (Math.PI / 180));
-                let gravityY = Math.sin(beta * (Math.PI / 180));
-                
-                // Set the gravity in your physics engine
-                engine.world.gravity.x = gravityX;
-                engine.world.gravity.y = gravityY;
-            }
-        }
-
         Matter.Events.on(engine, 'afterUpdate', function() {
             balls.forEach((ball, index) => {
+                if (Matter.SAT.collides(ball, platform).collided) {
+                    score++;
+                    World.remove(engine.world, ball);
+                    balls[index] = spawnBall();
+                    World.add(engine.world, balls[index]);
+                    document.getElementById('score').innerText = 'Score: ' + score;
+                }
                 if (ball.position.y > screen_height + ball.circleRadius) {
                     World.remove(engine.world, ball);
                     balls[index] = spawnBall();
                     World.add(engine.world, balls[index]);
                 }
-
-                // Check if the ball goes off the left side
                 if (ball.position.x < -ball.circleRadius) {
-                    Matter.Body.setPosition(ball, { x: screen_width + ball.circleRadius, y: ball.position.y });
+                    Body.setPosition(ball, { x: screen_width + ball.circleRadius, y: ball.position.y });
                 }
-
-                // Check if the ball goes off the right side
                 if (ball.position.x > screen_width + ball.circleRadius) {
-                    Matter.Body.setPosition(ball, { x: -ball.circleRadius, y: ball.position.y });
+                    Body.setPosition(ball, { x: -ball.circleRadius, y: ball.position.y });
                 }
             });
         });
 
-        // Event listener for window resize
+        document.addEventListener('keydown', (event) => {
+            const velocity = 5;
+            if (event.key === 'ArrowLeft') {
+                Body.setVelocity(platform, { x: -velocity, y: 0 });
+            } else if (event.key === 'ArrowRight') {
+                Body.setVelocity(platform, { x: velocity, y: 0 });
+            }
+        });
+
         window.addEventListener('resize', function() {
-            location.reload(); // Reloads the page
+            location.reload();
         });
     </script>
 </body>
