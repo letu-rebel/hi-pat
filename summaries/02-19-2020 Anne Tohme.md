@@ -1,95 +1,61 @@
 ---
 layout: default
 parent: 2020
-nav_order: 319
+nav_order: 291
 ---
-
 
 # 02-19-2020 Anne Tohme
 
 
 
-# Chapel Announcements
+# Announcements
 
-## Upcoming Events
+- Natalie announced that the deadline to sign up for the Longview Spring Break trip has been extended to this Friday. The trip is $80.
 
-- Student government election speeches this Friday in Chapel 
-- Several students running for student government president
-- Second Life small groups meeting this Monday
-- Sign up link provided if you still want to join a group
-- Dr. Mark Cortes, co-sponsor of the Honors College, speaking next Wednesday 
-- Dr. Cortes is a professor of theology at Wheaton
+- Dr. Mayes announced upcoming chapel events:
 
-## Reminders
+    - This Friday - Student government election speeches
 
-- Deadline extended for Long Beach spring break mission trip signups
-- $80 to sign up and join the trip 
-- Sign up by this Friday if interested
+    - Monday - Second Life groups signups
 
-## Other Updates
+    - Next Wednesday - Dr. Mark Cortez, co-sponsor of the Honors College, will be speaking
 
-- Anne Tomei, director of student care at Trinity International University, speaking today
-- Also presenting at faculty/staff event later today and tomorrow
+- Dr. Mayes reminded that Ann Tomei will also be presenting during the Student First events later today and tomorrow, so there will be another chance to hear her speak
 
 
-## Worship Section Summary
+### Worship Summary
 
-### Prayers
+- Dr. Mayes led the congregation in an opening prayer asking for God's guidance, peace, and devotion to Jesus Christ. 
 
-- Opening prayer asking God for light, love, and guidance to serve Him and live peacefully
-- Closing prayer asking God to encourage us to extend grace and welcome others home
+- The congregation sang praise songs including "God is Good All the Time", "Hiding Place", "Burdened by Death", and "I Have Found Thee". The songs expressed gratitude for God's goodness, salvation, and unconditional love.
 
-### Songs/Performances 
+- The Latino Singers performed five folk songs in honor of different cultures - Appalachian mountain songs, an American piece, an English ballad, and an Irish song. This showcased the diversity of worship.
 
-- Laterno Singers performed 5 folk songs:
-    - "Old Dan Tucker" 
-    - "Love Somebody"
-    - "Blow, Blow Thou Winter Wind" 
-    - "Danny Boy"
-    - "Round and Round Old Joe Clark"
-- Songs focused on themes of home, family, love, and belonging
+- Dr. Mayes led a responsive reading from Psalm 63 about earnestly seeking God. 
 
-### Overall Sentiment
+- The Latino Singers closed the worship section with the song "I Will Be Your Home", emphasizing God's welcoming and compassion. 
 
-- Joyful, welcoming atmosphere
-- Emphasis on God's unconditional love and grace
-- Desire to embrace others and make them feel at home
-- Longing to come home to God as a place of peace and acceptance
+- Overall, the worship had a sentiment of gratefulness, devotion, cultural celebration, and feeling at home with God.
 
 
-## Speaker Presentation Summary
+# Speaker's Presentation
 
-The speaker, Anne Tomei, focused her talk on the parable of the Prodigal Son found in Luke 15. She examined Rembrandt's famous painting of this parable, noting how the central focus is on the compassionate father embracing his son. 
+Ann Tomei, Director of Student Care at Trinity International University, focused her talk on the parable of the Prodigal Son found in Luke 15. She examined the compassionate heart of the father in the story.
 
-### The Heart of the Father
+## Key Points
 
-- The father in the parable represents God's divine love for humanity.  
-- Key details showing the father's love:
-    - He sees his son while he is still far off and is filled with compassion.
-    - He runs to embrace his son, which was culturally undignified. 
-    - He reconciles with his son before any confession of sin.
-    - His love is unconditional and compels him to welcome his son home.
-- The father's extravagant celebration with robe, ring, etc. symbolically replies to the son's confession and shows full reconciliation.
+- The focus of the parable should be on the welcoming father, not just the prodigal son. The story reveals the unconditional love and grace of God. 
 
-### Becoming the Father 
+- The father runs to embrace his son while he is still far off, before the son can even confess his sins. Reconciliation comes through the father's love, not the son's repentance. 
 
-- As we experience God's grace, we are called not just to remain as sons/daughters but to become like the father.
-- We must extend the same radical grace and unconditional welcome to others. 
-- Practically this means:
-    - Letting go of the need to be right
-    - Getting comfortable with discomfort
-    - Reaching out to those marginalized
-    - Celebrating others' success
-    - Forgiving without demanding apology
-    
-### The Elder Son
+- The robes, ring, sandals, and feast that the father gives the son represent forgiveness, authority, sonship, and celebration. The father looks past the son's sins.
 
-- The father also seeks out the elder bitter son who refuses to celebrate.
-- He gently pleads with this son too, showing unlimited grace. 
-- The elder son must choose to accept or reject the father's unconditional love.
+- The father also goes out to plead with the bitter, jealous older son to join the celebration. He offers the same unlimited grace to both sons, whether far or near.
 
-### Closing Thoughts
+- As we experience God's grace, we are called to "become the father" - to extend that same compassion and welcome to others. This means forgiving, rejoicing over the lost being found, and pursuing reconciliation.
 
-- The father's welcome is for all - both the lost and the bitter. 
-- As we grow in grace, we become more like the father, extending welcome.
-- We are called to be like Christ and let others see the Father through us.
+- We follow Christ's model of embodying the welcoming, unconditionally loving heart of the father. Our lives should reflect this grace we've received.
+
+## Closing Thoughts
+
+- Tomei closed by emphasizing our call to be like the compassionate father, turning on all the lights and welcoming everyone home. God desires to bring all His children home.
