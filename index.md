@@ -3,7 +3,7 @@ layout: default
 title: Introduction
 nav_order: 1
 ---
-# LeTourneau Chapel Summaries
+# **LeTourneau Chapel Summaries**
 
 Ever find yourself waking up late and missing chapel? Us too! That's why we've created LeTourneau Chapel Summaries, where being late is fashionable, and summaries are a click away.
 
