@@ -25,3 +25,5 @@ Feel like helping out? We accept contributions! Whether you want to correct a su
 ## :heart: Acknowledgments
 
 Big thanks to procrastination for inspiring this project and to coffee for fueling late-night coding sessions
+
+(No affiliation with the South Hall Rebels. This project is solely about chapel summaries.)
