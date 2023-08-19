@@ -30,14 +30,14 @@
         }
         #score {
             position: fixed;
-            top: 10px;
+            top: 6px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: rgba(255, 255, 255, 0.7); /* Adjusted opacity */
+            background-color: rgba(255, 255, 255, 0.1); /* Adjusted opacity */
             padding: 10px 20px; /* Increased padding */
             border-radius: 20px; /* Rounded corners */
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            color: #333; /* Dark text color */
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 1); /* Subtle shadow */
+            color: #ffffff; /* Dark text color */
             font-family: 'Roboto', sans-serif; /* Modern font */
             font-weight: 700; /* Bold font weight */
             font-size: 1.5rem; /* Adjusted font size */
@@ -69,7 +69,8 @@
             right: 0;
             left: 0;
             bottom: 0;
-            height: 5px;
+            height: 10px;
+            background-color: rgb(0, 0, 0); /* Border color */
         }
 
         #border-left {
@@ -91,6 +92,10 @@
 </head>
 <body>
     <div id="background"></div>
+    <div id="border-top"></div>
+    <div id="border-right"></div>
+    <div id="border-bottom"></div>
+    <div id="border-left"></div>  
     <div id="score">Score: 0</div>
     <script>
         window.onload = function() {
@@ -113,7 +118,7 @@
         const peg_radius = 10;
 
         const engine = Engine.create();
-        engine.world.gravity.y = .65;
+        engine.world.gravity.y = .3;
         engine.world.gravity.x = 0;
 
         const render = Render.create({
@@ -137,7 +142,7 @@
         let pegs = []; // Add this line to store all pegs
 
         function createPegs() {
-            let rows = (screen_height - 50 - 2*peg_spacing) / peg_spacing; // Exclude the last row
+            let rows = (screen_height - 150 - 0*peg_spacing) / peg_spacing; // Exclude the last row
             let cols = screen_width / peg_spacing;
             for (let row = 0; row < rows; row++) {
                 for (let col = 0; col < cols; col++) {
@@ -194,16 +199,14 @@
         let touchStartX = null; // Variable to store the starting touch position
 
         const platformHeight = 10; // Platform height
-        const platformWidth = 90; // Platform width
+        const platformWidth = 120; // Platform width
         const cornerRadius = 5; // Corner radius for rounded corners
 
-        const platform = Bodies.rectangle(screen_width / 2, screen_height - 10, platformWidth, platformHeight, {
+        const platform = Bodies.rectangle(screen_width / 2, screen_height - 45, platformWidth, platformHeight, {
             inertia: Infinity,
             chamfer: { radius: 3 }, // Rounded corners
             render: {
-                fillStyle: '#999', // Bright cyan blue color
-                strokeStyle: '#F0F', // Outline color
-                lineWidth: 1, // Outline thickness
+                fillStyle: '#EEE', // Fill color
             }
         });
         World.add(engine.world, platform);
@@ -268,8 +271,12 @@
         const platformMovementSpeed = constantValue / screen_width;
 
 
+        let lastUpdateTime = performance.now();
 
         Matter.Events.on(engine, 'afterUpdate', function() {
+            let currentTime = performance.now();
+            let deltaTime = Math.min((currentTime - lastUpdateTime) / 1000, 0.1); // Limit to 0.1 seconds
+            lastUpdateTime = currentTime;
             balls.forEach((ball, index) => {
                 // Update the score and save it in local storage
                 if (Matter.SAT.collides(ball, platform).collided) {
@@ -280,7 +287,7 @@
                     World.add(engine.world, balls[index]);
                     document.getElementById('score').innerText = 'Score: ' + score;
                     // Animate the bounce effect
-                    animateBounce(platform, 200, 1.1, 0.9); // 200ms duration, 10% increase in width, 10% decrease in height
+                    animateBounce(platform, 200, 1.3, 0.4); // 200ms duration, 10% increase in width, 10% decrease in height
                 }
                 pegs.forEach((peg) => {
                     if (Matter.SAT.collides(ball, peg).collided) {
@@ -295,9 +302,9 @@
                 // Move the platform based on the flags
                 let deltaX = 0;
                 if (moveLeft) {
-                    deltaX = -platformMovementSpeed;
+                    deltaX = -platformMovementSpeed * deltaTime * 50;
                 } else if (moveRight) {
-                    deltaX = platformMovementSpeed;
+                    deltaX = platformMovementSpeed * deltaTime * 50;
                 }
 
                 let newX = platform.position.x + deltaX;
@@ -308,14 +315,14 @@
                 // Update the platform's position
                 Body.setPosition(platform, { x: newX, y: platform.position.y });
                 // Fix the platform's position on the y-axis and prevent rotation
-                Body.setPosition(platform, { x: platform.position.x, y: screen_height - 10 });
+                Body.setPosition(platform, { x: platform.position.x, y: screen_height - 45 });
                 Body.setAngle(platform, 0); // Prevent rotation
 
 
 
 
                 // Fix the platform's position on the y-axis
-                Body.setPosition(platform, { x: platform.position.x, y: screen_height - 10 });
+                Body.setPosition(platform, { x: platform.position.x, y: screen_height - 45 });
             });
             pegs.forEach((peg) => {
                 if (peg.intensity > peg.targetIntensity) {
@@ -337,7 +344,7 @@
             let newX = platform.position.x + deltaX;
             // Clamp the new x-coordinate within the screen bounds
             newX = Math.max(platformWidth / 2, Math.min(screen_width - platformWidth / 2, newX));
-            Body.setPosition(platform, { x: newX, y: screen_height - 10 }); // Ensure the y-coordinate remains the same
+            Body.setPosition(platform, { x: newX, y: screen_height - 45 }); // Ensure the y-coordinate remains the same
             touchStartX = touchCurrentX; // Update the starting touch position
         });
         document.addEventListener('keydown', (event) => {
@@ -358,10 +365,6 @@
         window.addEventListener('resize', function() {
             location.reload();
         });
-    </script>
-    <div id="border-top"></div>
-    <div id="border-right"></div>
-    <div id="border-bottom"></div>
-    <div id="border-left"></div>    
+    </script>  
 </body>
 </html>
