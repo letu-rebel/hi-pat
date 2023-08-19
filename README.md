@@ -24,10 +24,4 @@ Feel like helping out? We accept contributions! Whether you want to correct a su
 
 ## :heart: Acknowledgments
 
-Big thanks to procrastination for inspiring this project and to coffee for fueling late-night coding sessions.
-
-## :mailbox_with_mail: Contact
-
-Got questions? Suggestions? Fan mail? Reach out at [secretidentity@letu.edu](mailto:05.mutiny-taboos@icloud.com).
-
-Remember, LeTourneau Chapel Summaries is almost as good as being there. But not quite. Enjoy!
+Big thanks to procrastination for inspiring this project and to coffee for fueling late-night coding sessions
