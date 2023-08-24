@@ -83,7 +83,8 @@ These summaries are written by AI, so don't expect poetry. If you're looking for
     "https://media.discordapp.net/attachments/997036669976989777/1136917801563598868/IMG_2109.jpg",
     "https://media.tenor.com/G01HjYj1r1oAAAAC/will-smith-men-in-black.gif",
     "https://media.tenor.com/u9gFqnF5U3YAAAAC/crying-tears.gif",
-    "https://media.discordapp.net/stickers/1141822383762702479.webp"
+    "https://media.discordapp.net/stickers/1141822383762702479.webp",
+    "https://media.tenor.com/JbUPgGq3CcwAAAAC/merica-america.gif"
   ];
 
   var randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
